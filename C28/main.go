@@ -110,11 +110,11 @@ func main() {
 
 		username := r.URL.Query().Get("username")
 		currentConn := WebSocketConnection{Conn: currentGorillaConn, Username: username}
-		connections := append(connections, &currentConn)
+		connections = append(connections, &currentConn)
 
 		go handleIO(&currentConn, connections)
 	})
 
-	fmt.Println("Server running at :8080")
+	fmt.Println("Server starting at :8080")
 	http.ListenAndServe(":8080", nil)
 }
