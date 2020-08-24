@@ -1,9 +1,9 @@
 package main
 
 import (
-	"C29/model"
 	"bytes"
 	"fmt"
+	"go-pemrograman-lanjut/C29/model"
 	"os"
 	"strings"
 
