@@ -3,7 +3,7 @@ package main
 import (
 	"bytes"
 	"fmt"
-	"C29/model"
+	"go-pemrograman-lanjut/C29/model"
 	"os"
 	"strings"
 

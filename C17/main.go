@@ -11,9 +11,9 @@ import (
 type M map[string]interface{}
 
 var data = []M{
-	M{"Name": "Noval", "Gender": "male", "Age": 18},
-	M{"Name": "Nabila", "Gender": "female", "Age": 12},
-	M{"Name": "Yasa", "Gender": "male", "Age": 11},
+	{"Name": "Noval", "Gender": "male", "Age": 18},
+	{"Name": "Nabila", "Gender": "female", "Age": 12},
+	{"Name": "Yasa", "Gender": "male", "Age": 11},
 }
 
 func main() {
