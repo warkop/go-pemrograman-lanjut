@@ -2,6 +2,8 @@ syntax = "proto3";
 
 package model;
 
+option go_package = "./c30/common/model";
+
 message GarageCoordinate {
     float latitude = 1;
     float longitude = 2;

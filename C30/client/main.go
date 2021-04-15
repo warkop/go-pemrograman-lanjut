@@ -1,8 +1,8 @@
 package main
 
 import (
-	"C30/common/config"
-	"C30/common/model"
+	"c30/common/config"
+	model "c30/common/model"
 	"context"
 	"encoding/json"
 	"fmt"

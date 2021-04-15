@@ -1,12 +1,12 @@
 package main
 
 import (
+	"c30/common/config"
 	"context"
 	"log"
 	"net"
 
-	"C30/common/config"
-	"C30/common/model"
+	"c30/common/model"
 
 	"github.com/golang/protobuf/ptypes/empty"
 	"google.golang.org/grpc"
