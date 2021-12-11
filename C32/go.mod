@@ -4,7 +4,6 @@ go 1.14
 
 require (
 	github.com/davecgh/go-spew v1.1.1 // indirect
-	github.com/dgrijalva/jwt-go v3.2.0+incompatible
-	github.com/golang/protobuf v1.3.2 // indirect
+	github.com/golang-jwt/jwt/v4 v4.2.0
 	github.com/novalagung/gubrak/v2 v2.0.0
 )
