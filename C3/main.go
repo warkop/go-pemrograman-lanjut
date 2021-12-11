@@ -10,9 +10,10 @@ import (
 
 //User is
 type User struct {
-	Name  string `json:"name" validate:"required"`
-	Email string `json:"email" validate:"required,email"`
-	Age   int    `json:"age" validate:"gte=0,lte=80"`
+	Name  string   `json:"name" validate:"required"`
+	Email string   `json:"email" validate:"required,email"`
+	Age   int      `json:"age" validate:"gte=0,lte=80"`
+	List  []string `json:"list" validate:"unique"`
 }
 
 //CustomValidator is
@@ -53,8 +54,9 @@ func main() {
 					report.Message = fmt.Sprintf("%s value must be greater than %s", err.Field(), err.Param())
 				case "lte":
 					report.Message = fmt.Sprintf("%s value must be lower than %s", err.Field(), err.Param())
+				case "unique":
+					report.Message = fmt.Sprintf("%s must be unique", err.Field())
 				}
-				break
 			}
 		}
 
@@ -64,15 +66,16 @@ func main() {
 
 	e.POST("/users", func(context echo.Context) error {
 		u := new(User)
+
 		if err := context.Bind(u); err != nil {
-			return err
+			e.HTTPErrorHandler(err, context)
 		}
 		if err := context.Validate(u); err != nil {
-			return err
+			e.HTTPErrorHandler(err, context)
 		}
 
 		return context.JSON(http.StatusOK, u)
 	})
 
-	e.Logger.Fatal(e.Start(":9000"))
+	e.Logger.Fatal(e.Start(":5000"))
 }
