@@ -3,7 +3,7 @@ module go-pemrograman-lanjut/C31
 go 1.22
 
 require (
-	github.com/golang-jwt/jwt/v4 v4.5.0
+	github.com/golang-jwt/jwt/v4 v4.5.2
 	github.com/novalagung/gubrak/v2 v2.0.1
 )
 
